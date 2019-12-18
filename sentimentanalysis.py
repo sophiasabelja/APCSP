@@ -15,7 +15,7 @@ def authentication(cons_key, cons_secret, acc_token, acc_secret):
     auth.set_access_token(acc_token, acc_secret)
     api = tweepy.API(auth)
     return api
-  
+ # to analyze from the last 24 hours, 50 max.
 today_datetime = datetime.today().now()
 yesterday_datetime = today_datetime - timedelta(days=1)
 today_date = today_datetime.strftime('%Y-%m-%d')
