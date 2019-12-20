@@ -1,3 +1,4 @@
+#problem-- this is for twitter, but I want to analyze news articles. What do I do?
 pip3 install tweepy nltk google-cloud-language python-telegram-bot
 # https://www.freecodecamp.org/news/how-to-make-your-own-sentiment-analyzer-using-python-and-googles-natural-language-api-9e91e1c493e/
 import tweepy
