@@ -1,4 +1,12 @@
 #problem-- this is for twitter, but I want to analyze news articles. What do I do?
+##***************************************************************************************
+# The following code is by Dzaky Widya Putra, who wrote a tutorial about how to build a sentiment analyzer using Python and Google's Natural Language API. Where you see the "**************************************", that is the end of Putra's code. 
+#* Title: How to make your own sentiment analyzer using Python and Google’s Natural Language API
+#*  Author: Putra, Dzaky Widya
+#*  Date: 12 February 2019
+#*  Code version: Python
+#*  Availability: https://www.freecodecamp.org/news/how-to-make-your-own-sentiment-analyzer-using-python-and-googles-natural-language-api-9e91e1c493e/
+
 pip3 install tweepy nltk google-cloud-language python-telegram-bot
 # https://www.freecodecamp.org/news/how-to-make-your-own-sentiment-analyzer-using-python-and-googles-natural-language-api-9e91e1c493e/
 import tweepy
@@ -16,7 +24,7 @@ def authentication(cons_key, cons_secret, acc_token, acc_secret):
     auth.set_access_token(acc_token, acc_secret)
     api = tweepy.API(auth)
     return api
- # to analyze from the last 24 hours, 50 max.
+
 today_datetime = datetime.today().now()
 yesterday_datetime = today_datetime - timedelta(days=1)
 today_date = today_datetime.strftime('%Y-%m-%d')
@@ -42,3 +50,4 @@ def search_tweets(keyword, total_tweets):
     return search_result
 user_removed = re.sub(r'@[A-Za-z0-9]+','',tweet.decode('utf-8'))
 link_removed = re.sub('https?://[A-Za-z0-9./]+','',user_removed)
+#*************************************************** END OF PUTYA'S CODE ********************************************************
